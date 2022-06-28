@@ -1,20 +1,16 @@
-import { Component } from '@angular/core';
-import {FormGroup, FormControl} from '@angular/forms'
+import { Component, OnInit } from '@angular/core';
+
 @Component({
-  selector: 'app-root',
+  selector: 'my-app',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: [ './app.component.css' ]
 })
-export class AppComponent {
-  title = 'angular reactive form';
-  loginForm = new FormGroup({
-    user:new FormControl(''),
-    password:new FormControl(''),
-  })
+export class AppComponent implements OnInit {
+  locations: string[] = ['Location', 'Downtown', 'S. County', 'Lakeside'];
 
-loginUser()
-{
-  console.warn(this.loginForm.value)
-}
+  constructor(){ }
 
+  ngOnInit() {
+
+  }
 }
